@@ -1,69 +1,42 @@
-/* Basic Style */
 .body {
   background-color: #f8f8f8;
   color: #333;
   font-family: "Lato", sans-serif;
 }
 
-h1 {
-  margin: 0;
-}
-
-.about-container {
+.about {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.about-img {
+h1 {
+  margin: 0;
+}
+
+.about__img {
   width: 100%;
 }
 
-.about-link {
+.about__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .about-container {
+  .about {
     text-align: center;
   }
 }
 
-.app-container {
+.app {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.input,
-.task-label {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-
-.task-row {
-  display: flex;
-}
-
-.list {
-  margin: 0;
-  padding: 0px;
-}
-
-.task,
-.heading {
-  list-style: none;
-}
-
-.input,
-.btn {
-  outline: none;
-}
-
-.btn {
+.app__btn {
   background: none;
   border: 0px;
   color: #888;
@@ -71,15 +44,29 @@ h1 {
   width: 60px;
   font-family: "Lato", sans-serif;
   cursor: pointer;
+  outline: none;
 }
 
-.btn:hover {
+.app__btn:hover {
   color: #3a3a3a;
 }
 
-/* Heading */
-.heading,
-.add-task-label {
+.create__container {
+  display: flex;
+}
+
+.app__list {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+}
+
+.app__inputtext {
+  outline: none;
+}
+
+.app__heading,
+.create__label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -89,7 +76,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.input {
+.app__inputtext {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -102,23 +89,22 @@ h1 {
   color: #888;
 }
 
-.input:focus {
+.app__inputtext:focus {
   color: #333;
 }
 
 /* New Task */
-.add-task-label {
+.create__label {
   display: block;
   margin: 0 0 20px;
 }
 
-#new-task {
+.create__input {
   width: 318px;
   flex: auto;
 }
 
-/* Task list */
-.task {
+.app__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -128,47 +114,51 @@ h1 {
   align-items: center;
 }
 
-.task {
-  vertical-align: middle;
+/* Task */
+.task__checkbox {
+  margin: 0 10px;
 }
 
-.task-label {
+.task__inputtext,
+.task__label {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.task-input {
-  width: 226px;
-}
-
-.btn-img {
+.task__btn_delete .task__btn-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn-img:hover {
+.task__btn_delete .task__btn-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#completed-tasks .task-label {
+.completed .task__label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.task-input {
+.task__inputtext {
   display: none;
 }
 
-.edit-mode .task-input {
+.task_edit .task__inputtext {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .task-label {
+.task_edit .task__label {
   display: none;
 }
