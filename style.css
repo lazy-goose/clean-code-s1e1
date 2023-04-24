@@ -5,18 +5,18 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.aaa {
+.about-container {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.about-container img {
   width: 100%;
 }
 
-.aaa .more-info {
+.about-container .more-info {
   font-family: fantasy, cursive;
 }
 
@@ -32,7 +32,7 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
+.task-input, .task-label {
   width: 56%;
   display: inline-block;
   flex-grow: 1
