@@ -1,5 +1,5 @@
 var taskInput = document.getElementById('new-task')
-var addButton = document.getElementsByTagName('button')[0]
+var addButton = document.getElementById('add-button')
 var incompleteTaskHolder = document.getElementById('incomplete-tasks')
 var completedTasksHolder = document.getElementById('completed-tasks')
 
